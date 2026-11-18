@@ -1,0 +1,94 @@
+@import '../../../../Beat/themes/base/sass/functions';
+@import "variables";
+@import "../../../../Beat/themes/beat/sass/beat_crit";
+
+
+// flex theme
+
+.flex {
+    @include media-breakpoint-down(lg) {
+        .cart-icon-label {
+            display: none;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .topbar-wrapper {
+            .cart-icon-dropdown {
+                background-color: $header-bg-color;
+            }
+            #shop-nav {
+                margin-left: map-get($spacers, 5);
+                .fa-user,
+                .fa-list,
+                .fa-heart,
+                .fa-shopping-cart {
+                    font-size: 1.2em;
+                }
+            }
+             .cart-icon-dropdown {
+                .cart-icon-label {
+                    font-weight: $font-weight-bold;
+                }
+                &:not(.not-empty) .cart-icon-dropdown-icon {
+                    margin-right: .5rem;
+                }
+                &.not-empty {
+                    .cart-icon-label {
+                        margin-left: map-get($spacers, 3);
+                    }
+                    .cart-icon-dropdown-price {
+                        margin-left: 0;
+                    }
+                }
+            }
+            .dropdown-menu {
+                margin-top: 0;
+            }
+            .nav-right .nav-link {
+                padding-top: .65rem;
+                padding-bottom: .65rem;
+            }
+        }
+    }
+    
+    header {
+        @include media-breakpoint-up(lg) {
+            &.full-width-mega {
+                .menu-search-position-right {
+                    .main-search-wrapper {
+                       .search-wrapper {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .nav-custom-wrapper {
+                    font-size: 1.1em;
+                    font-weight: $font-weight-bold;
+                    margin: map-get($spacers, 4) 0;
+                    > div {
+                        justify-content: right;
+                        i {
+                            background-color: $navbar-link-active-bg;
+                            color: $navbar-link-active-color;
+                            padding: .75rem;
+                            margin-right: map-get($spacers, 2);
+                            border-radius: 50%;
+                        }
+                    }
+                    i+i {
+                        margin-left: map-get($spacers, 4);
+                    }
+                }
+            }
+        }
+    }
+
+    .newsletter-wrapper {
+       border-top: 1px solid $gray-medium; 
+    }
+    .search-wrapper {
+        .btn-secondary {
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Template isFullResponsive="true">
+    <Name>Wood</Name>
+    <Author>Themeart GmbH</Author>
+    <URL>https://www.themeart.de</URL>
+    <Parent>Beat</Parent>
+    <Preview>preview.png</Preview>
+    <Version>1.0.0</Version>
+    <MinShopVersion>5.2.0</MinShopVersion>
+    <Description>Das MyBeat-Theme ist das Child-Template für eigene Anpassungen.</Description>
+    <Settings>
+        <Section Name="Theme" Key="theme">
+            <Setting Description="Theme" Key="theme_default" Type="select" Value="wood" override="true">
+                <Option Value="wood">Wood</Option>
+            </Setting>
+        </Section>
+    </Settings>
+    <Minify>
+        <CSS Name="wood.css">
+            <File Path="themes/wood/wood.css"/>
+            <File Path="themes/wood/custom.css"/>
+        </CSS>
+    </Minify>
+    <Boxes>
+        <Container Position="left" Available="1" />
+        <Container Position="right" Available="0" />
+        <Container Position="top" Available="0" />
+        <Container Position="bottom" Available="1" />
+    </Boxes>
+</Template>

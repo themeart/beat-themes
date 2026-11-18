@@ -1,0 +1,24 @@
+@import '../../../../Beat/themes/base/sass/functions';
+@import "variables";
+@import "../../../../Beat/themes/beat/sass/beat_crit";
+
+
+// wood theme
+
+.topbar-wrapper {
+    border-bottom: 1px solid $gray-medium;
+}
+header,
+.newsletter-wrapper,
+.fixed-search {
+    background: $header-bg-image;
+}
+.newsletter-wrapper {
+   border-top: 1px solid $gray-medium; 
+}
+.search-wrapper {
+    .form-control,
+    .btn-secondary {
+        border-bottom-color: darken($gray-medium, 10%);
+    }
+}

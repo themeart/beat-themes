@@ -1,0 +1,87 @@
+@import '../../../../Beat/themes/base/sass/functions';
+@import "variables";
+@import "../../../../Beat/themes/beat/sass/beat_crit";
+
+
+// smile theme
+
+.smile {
+    .badge-primary,
+    .btn-primary { color: $navbar-middle-color; 
+      @include hover { color: $navbar-middle-color; }
+    }
+    @include media-breakpoint-up(lg) {
+        .fa-sup {
+            top: 10%;
+            left: 80%;
+            background-color: $white;
+        }
+    }
+    header {
+        &.full-width-mega {
+			.navbar-nav {
+				> .nav-item {
+					&.active,
+					&:hover {
+						> .nav-link { 
+							&::before {
+								height: 2px;
+								content: '';
+								position: absolute;
+								bottom: 20%;
+								left: $navbar-nav-link-padding-x;
+								width: calc(100% - $navbar-nav-link-padding-x * 2);
+								background-color: $navbar-link-active-color;
+							}
+						}
+					}
+				}
+			}
+        }
+        .menu-multiple-rows-multiple {
+            background-color: $navbar-bg-color;
+            @include media-breakpoint-up(lg) {
+                &.container-fluid-xl {
+                    max-width: 100%;
+                    > .navbar {
+                        max-width: map-get($container-max-widths, xl);
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding-left: map-get($spacers, 3);
+                        padding-right: map-get($spacers, 3);
+                        .navbar-nav > .nav-item > .nav-link {
+                            font-weight: $font-weight-bold;
+                            font-size: 1.1em;
+                        }
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            .cart-icon-dropdown {
+                > .nav-link {
+                    .cart-icon-dropdown-icon {
+                        border-radius: 50%;
+                        background-color: $navbar-bg-color;
+                        color: $navbar-middle-color;
+                        padding: map-get($spacers, 3);
+                    }
+                    &:hover {
+                        .cart-icon-dropdown-icon {
+                            background-color: $navbar-link-active-bg;
+                            color: $navbar-link-active-color;
+                        }
+                    }
+                }
+                .cart-icon-dropdown-price {
+                    font-weight: $font-weight-bold;
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+    
+    #footer {
+        border-top: 4px solid $primary;
+    }
+}
